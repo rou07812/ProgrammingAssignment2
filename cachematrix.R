@@ -22,7 +22,7 @@ cacheSolve <- function(x, ...) {
                 return(inverseM)        #Return inverse matrix from cache
         }
         data <- x$get()         #Get matrix from makeCacheMatrix
-        i <- solve(data, ...)   #Inverse new matrix
-        x$setinverse(i)         #set inversed matrix to cache
-        i                       # Return a matrix that is the inverse of 'x'
+        inverseM <- solve(data, ...)   #Inverse new matrix
+        x$setinverse(inverseM)         #set inversed matrix to cache
+        inverseM                       # Return a matrix that is the inverse of 'x'
 }
